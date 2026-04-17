@@ -20,6 +20,8 @@ Beim Start wählt man den Verbindungsweg: entweder über einen **Serial Port** (
 
 ![Verbindungsdialog](screenshots/StartDialog.png)
 
+Für Netzwerkverbindungen wird die vorhandene USB-Schnittstelle durch einen W5500-EVB-Pico ersetzt, der das Übertragungsprotokoll über eine TCP/IP-Verbindung tunnelt. Dieses Projekt ist noch in Arbeit.
+
 ---
 
 ### Kanal konfigurieren
