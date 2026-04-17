@@ -1,0 +1,49 @@
+# Build-Ausgaben
+bin/
+obj/
+out/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider (JetBrains)
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# .NET
+*.dll
+*.exe
+!tools/*.exe
+*.pdb
+*.mdb
+*.cache
+*.ilk
+*.log
+
+# Laufzeit-Konfigurationen mit lokalen Pfaden
+appsettings.Development.json
+local.settings.json
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporäre Dateien
+*.tmp
+*.temp
+~$*

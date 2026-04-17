@@ -1,0 +1,219 @@
+﻿<UserControl x:Class="alcwin.ChannelControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:alcwin"
+             mc:Ignorable="d" 
+             d:DesignHeight="591.333" d:DesignWidth="267.333">
+    <UserControl.Resources>
+        <Style x:Key="ChargeStateStyle" TargetType="Grid">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=ChargeState}" Value="3">
+                    <DataTrigger.Setters>
+                        <Setter  Property="Visibility" Value="Visible"/>
+                    </DataTrigger.Setters>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.Resources>
+                <Style TargetType="TextBox" BasedOn="{StaticResource AlcTextBoxStyle}">
+                    <Setter Property="MinWidth" Value="80"/>
+                    <Setter Property="IsReadOnly" Value="True"/>
+                </Style>
+                <Style TargetType="TextBlock" BasedOn="{StaticResource Caption}"/>
+                <Style TargetType="Button" BasedOn="{StaticResource AlcButtonStyle}">
+                    <Setter Property="Margin" Value="0 2"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Popup x:Name="FunctionPopup" StaysOpen="False" Width="200" TextElement.FontWeight="DemiBold" TextElement.FontSize="16" Placement="Center" PlacementTarget="{Binding ElementName=Function}" AllowsTransparency="True">
+                <Popup.Resources>
+                    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource AlcRadioButtonStyle2}">
+                        <Setter Property="Margin" Value="2"/>
+                    </Style>
+                </Popup.Resources>
+                <Border Style="{StaticResource DefaultBorder}" Background="LightBlue">
+                    <UniformGrid Margin="4" Columns="2" VerticalAlignment="Stretch">
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncCharge" GroupName="Func" Content="Laden" IsChecked="True" Tag="1"/>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncDischarge" GroupName="Func" Content="Entladen" Tag="2"/>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncDischargeCharge" GroupName="Func" Tag="3">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Entladen" HorizontalAlignment="Center" Style="{x:Null}"/>
+                                <TextBlock Text="Laden" HorizontalAlignment="Center" Style="{x:Null}"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncTest" GroupName="Func" Content="Test" Tag="4"/>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncMaintain" GroupName="Func" Content="Wartung" Tag="5"/>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncForm" GroupName="Func" Content="Formieren" Tag="6"/>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncCycle" GroupName="Func" Content="Zyklen" Tag="7"/>
+                        <RadioButton Click="FuncButton_Click" x:Name="FuncRefresh" GroupName="Func" Content="Refresh" Tag="8"/>
+                    </UniformGrid>
+                </Border>
+            </Popup>
+            <Border Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Background="Wheat" Margin="0 4" Padding="5" CornerRadius="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{StaticResource ChannelDrawingImage}" Height="40"/>
+                    <TextBlock Grid.Column="1" x:Name="CaptionText" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:ChannelControl}, Path=Caption, Mode=OneWay}"  HorizontalAlignment="Stretch" TextAlignment="Center" FontSize="30" FontWeight="Bold" />
+                </Grid>
+            </Border>
+            <Grid Grid.Row="7" Grid.ColumnSpan="3">
+                <Grid.Resources>
+                    <Style TargetType="Border" BasedOn="{StaticResource DefaultBorder}">
+                        <Setter Property="Margin" Value=" 0 4"/>
+                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="CornerRadius" Value="3"/>
+                    </Style>
+                </Grid.Resources>
+                <TextBlock x:Name="ChargeStateText" Text="Status"  HorizontalAlignment="Stretch" TextAlignment="Center" Visibility="Collapsed" />
+                <Border Background="#d0d0d0" x:Name="StateIdle" Visibility="Hidden" ToolTip="Leerlauf">
+                    <Grid Height="40"/>
+                </Border>
+                <Border Background="#d0d0d0" x:Name="StatePause" Visibility="Collapsed" ToolTip="Pause">
+                    <Grid Height="40">
+                        <Image Source="{StaticResource PauseDrawingImage}"/>
+                    </Grid>
+                </Border>
+                <Border Background="Orange" Visibility="Hidden" x:Name="StateDischarging" ToolTip="Entladen">
+                    <Grid HorizontalAlignment="Center" Height="40" >
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="UserControl.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="DischargeArrow" Storyboard.TargetProperty="Opacity" From="0" To="1" RepeatBehavior="Forever" AutoReverse="True"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="DischargeArrow" Grid.Column="0" Source="{StaticResource DisChargeDrawingImage}" Margin="8"/>
+                        <Image Grid.Column="2" Source="{StaticResource BatHalfDrawingImage}"/> 
+                    </Grid>
+                </Border>
+                <Border Background="LightGreen" Visibility="Hidden" x:Name="StateCharging" ToolTip="Laden">
+                    <Grid HorizontalAlignment="Center" Height="40">
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="UserControl.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ChargeArrow" Storyboard.TargetProperty="Opacity" From="0" To="1" RepeatBehavior="Forever" AutoReverse="True"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="ChargeArrow" Grid.Column="0" Source="{StaticResource ChargeDrawingImage}" Margin="8"/>
+                        <Image Grid.Column="2" Source="{StaticResource BatHalfDrawingImage}"/>
+                    </Grid>
+                </Border>
+                <Border Background="LightGreen" Visibility="Hidden" x:Name="StateTrickleCharge" ToolTip="Erhaltungsladung">
+                    <Grid Height="40">
+                        <Image Source="{StaticResource BatteryDrawingImage}"/>
+                    </Grid>
+                </Border>
+                <Border Background="Yellow" Visibility="Hidden" x:Name="StateDischarged" ToolTip="Entladen">
+                    <Grid Height="40">
+                        <Image Source="{StaticResource BatEmptyDrawingImage}"/>
+                    </Grid>
+                </Border>
+                <Border Background="Red" Visibility="Hidden" x:Name="StateEmergency" ToolTip="Nothalt">
+                    <Grid Height="40">
+                        <Image Source="{StaticResource AlertDrawingImage}"/>
+                    </Grid>
+                </Border>
+            </Grid>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Funktion:"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Akkutyp:"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Kapazität:"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Spannung:"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladestrom:"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Entladestrom:"/>
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Spannung:"/>
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="Strom:"/>
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="Kapazität:"/>
+            <TextBlock Grid.Row="11" Grid.Column="0" Text="Log:"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="Function" Grid.ColumnSpan="2" MinWidth="140" Click="Function_Click"/>
+            <TextBox Grid.Row="2" Grid.Column="1" x:Name="BatType"/>
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="Capacity" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="4" Grid.Column="1" x:Name="Voltage" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="5" Grid.Column="1" x:Name="ChargeCurrent" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="6" Grid.Column="1" x:Name="DischargeCurrent" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="8" Grid.Column="1" x:Name="StateVoltage" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="9" Grid.Column="1" x:Name="StateCurrent" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="10" Grid.Column="1" x:Name="StateCapacity" HorizontalContentAlignment="Right"/>
+            <TextBox Grid.Row="11" Grid.Column="1" x:Name="StateLog" HorizontalContentAlignment="Right"/>
+            <TextBlock Grid.Row="3" Grid.Column="2" Text="mAh"/>
+            <TextBlock Grid.Row="4" Grid.Column="2" Text="V"/>
+            <TextBlock Grid.Row="5" Grid.Column="2" Text="mA"/>
+            <TextBlock Grid.Row="6" Grid.Column="2" Text="mA"/>
+            <TextBlock Grid.Row="8" Grid.Column="2" Text="V"/>
+            <TextBlock Grid.Row="9" Grid.Column="2" Text="mA"/>
+            <TextBlock Grid.Row="10" Grid.Column="2" Text="mAh"/>
+        </Grid>
+        <Border Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Background="Wheat" Margin="0 4 0 0">
+        <UniformGrid Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Columns="4">
+            <UniformGrid.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource AlcButtonStyle}">
+                    <Setter Property="Width" Value="48"/>
+                    <Setter Property="Height" Value="48"/>
+                    <Setter Property="Margin" Value="4"/>
+                    <Setter Property="Padding" Value="4"/>
+                </Style>
+            </UniformGrid.Resources>
+            <Button Click="Start_Click" ToolTip="Start">
+                <Image Source="{StaticResource StartDrawingImage}"/>
+            </Button>
+            <Button Click="Stop_Click" ToolTip="Stop">
+                <Image Source="{StaticResource StopDrawingImage}"/>
+            </Button>
+            <Button Click="Edit_Click" ToolTip="Bearbeiten">
+                <Image Source="{StaticResource EditDrawingImage}"/>
+            </Button>
+            <Button Click="Log_Click" ToolTip="Log">
+                <Image Source="{StaticResource LogDrawingImage}"/>
+            </Button>
+        </UniformGrid>
+        </Border>
+    </Grid>
+</UserControl>

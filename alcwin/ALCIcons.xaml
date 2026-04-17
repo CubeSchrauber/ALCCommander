@@ -1,0 +1,675 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Geometry x:Key="AlertGeometry1">F0 M240,240z M0,0z M3000,969.321L3102.68,1174.68 2897.32,1174.68 3000,969.321z</Geometry>
+  <Geometry x:Key="AlertGeometry2">F0 M240,240z M0,0z M3000,1015.7L3000,1106.23</Geometry>
+  <DrawingGroup x:Key="AlertDrawingGroup" ClipGeometry="M0,0 V240 H240 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2880,-952">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,0,-0.77194">
+        <DrawingGroup Opacity="1" Transform="1,0,0,1,0,0.77194">
+          <GeometryDrawing Brush="#FFE5F20D" Geometry="{StaticResource AlertGeometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFE5F20D" Thickness="16" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1,0,0,1,0,0.77194">
+          <GeometryDrawing Geometry="{StaticResource AlertGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="26.67" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="2.15106,0,0,2.15106,-3453.18,-1324.36">
+          <GeometryDrawing Brush="#FF000000">
+            <GeometryDrawing.Geometry>
+              <EllipseGeometry RadiusX="6.198" RadiusY="6.198" Center="3000,1151.84" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="AlertDrawingImage" Drawing="{StaticResource AlertDrawingGroup}" />
+  <Geometry x:Key="DatabaseGeometry1">F0 M512,512z M0,0z M2251.69,206.345C2251.69,229.733 2314.56,248.72 2392,248.72 2469.29,248.72 2532.06,229.809 2532.31,206.482L2532.31,152.402C2532.06,175.728 2469.29,194.64 2392,194.64 2314.56,194.64 2251.69,175.653 2251.69,152.265L2251.69,206.345z</Geometry>
+  <Geometry x:Key="DatabaseGeometry2">F0 M512,512z M0,0z M2251.69,206.345C2251.69,229.733 2314.56,248.72 2392,248.72 2469.29,248.72 2532.06,229.809 2532.31,206.482L2532.31,152.402C2532.06,175.728 2469.29,194.64 2392,194.64 2314.56,194.64 2251.69,175.653 2251.69,152.265L2251.69,206.345z</Geometry>
+  <Geometry x:Key="DatabaseGeometry3">F0 M512,512z M0,0z M2251.69,206.345C2251.69,229.733 2314.56,248.72 2392,248.72 2469.29,248.72 2532.06,229.809 2532.31,206.482L2532.31,152.402C2532.06,175.728 2469.29,194.64 2392,194.64 2314.56,194.64 2251.69,175.653 2251.69,152.265L2251.69,206.345z</Geometry>
+  <DrawingGroup x:Key="DatabaseDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-1647,0">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,-489.068,0">
+        <DrawingGroup Opacity="1" Transform="1.22039,0,0,1.22039,-527.1,-56.4193" />
+        <DrawingGroup Opacity="1" Transform="1.22039,0,0,1.22039,-527.1,-56.4193" />
+        <DrawingGroup Opacity="1" Transform="1.22039,0,0,1.22039,-527.1,-127.212">
+          <GeometryDrawing Brush="#FF73768C" Geometry="{StaticResource DatabaseGeometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF73768C" Thickness="26.22" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.22039,0,0,1.22039,-527.1,11.3211">
+          <GeometryDrawing Brush="#FF73768C" Geometry="{StaticResource DatabaseGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF73768C" Thickness="26.22" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.22039,0,0,1.22039,-527.1,149.854">
+          <GeometryDrawing Brush="#FF73768C" Geometry="{StaticResource DatabaseGeometry3}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF73768C" Thickness="26.22" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="DatabaseDrawingImage" Drawing="{StaticResource DatabaseDrawingGroup}" />
+  <Geometry x:Key="ArrowRightGeometry">F0 M513,512z M0,0z M2977.76,334.917L2977.76,481.477 2578.21,256 2977.76,30.523 2977.76,177.083 3230.19,177.083 3230.19,334.917 2977.76,334.917z</Geometry>
+  <DrawingGroup x:Key="ArrowRightDrawingGroup" ClipGeometry="M0,0 V512 H513 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-3386,0">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,581.318,0">
+        <DrawingGroup Opacity="1" Transform="-0.523014,0,0,0.926792,4565.22,18.7412">
+          <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource ArrowRightGeometry}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="70.88" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="ArrowRightDrawingImage" Drawing="{StaticResource ArrowRightDrawingGroup}" />
+  <Geometry x:Key="PauseGeometry">F0 M240,240z M0,0z M3000,728.205L3000,809 3043.5,765.499</Geometry>
+  <DrawingGroup x:Key="PauseDrawingGroup" ClipGeometry="M0,0 V240 H240 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2880,-689">
+      <DrawingGroup Opacity="1" Transform="1.15545,0,0,1.15545,-448.572,-107.275">
+        <DrawingGroup Opacity="1" Transform="0.918832,0,0,0.918832,228.121,49.6602">
+          <GeometryDrawing Brush="#FFFFFFFF">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="15.07" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <EllipseGeometry RadiusX="96.716" RadiusY="96.716" Center="3000,809.148" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="0.865465,0,0,0.865465,388.224,92.8424">
+          <GeometryDrawing Geometry="{StaticResource PauseGeometry}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="16" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="PauseDrawingImage" Drawing="{StaticResource PauseDrawingGroup}" />
+  <DrawingGroup x:Key="StopDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-553,0">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,-489.7,0">
+        <DrawingGroup Opacity="1" Transform="1,0,0,1,0.699701,-11.5748">
+          <GeometryDrawing Brush="#FFFF0000">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFFF0000" Thickness="96" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="1136.26,105.831,323.487,323.487" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="StopDrawingImage" Drawing="{StaticResource StopDrawingGroup}" />
+  <Geometry x:Key="EditGeometry1">F0 M512,512z M0,0z M2744.2,256L2803.51,196.69 3121.03,196.69 3121.03,315.31 2803.51,315.31 2744.2,256</Geometry>
+  <Geometry x:Key="EditGeometry2">F0 M512,512z M0,0z M3063.84,196.69L3063.84,315.31</Geometry>
+  <DrawingGroup x:Key="EditDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2207,0">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,-489.408,0">
+        <DrawingGroup Opacity="1" Transform="0.909127,-0.909127,0.799521,0.799521,61.8551,2717.81">
+          <DrawingGroup Opacity="1" Transform="1,0,0,1,0.408344,0">
+            <GeometryDrawing Geometry="{StaticResource EditGeometry1}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="27.58" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,1,0.408344,0">
+            <GeometryDrawing Geometry="{StaticResource EditGeometry2}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="27.58" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="EditDrawingImage" Drawing="{StaticResource EditDrawingGroup}" />
+  <Geometry x:Key="BatteryGeometry1">F0 M512,241z M0,0z M462.573,238.354C462.573,225.223,443.698,214.562,420.448,214.562L95.59,214.562C72.341,214.562,53.465,225.223,53.465,238.354L53.465,285.937C53.465,299.068,72.341,309.728,95.59,309.728L420.448,309.728C443.698,309.728,462.573,299.068,462.573,285.937L462.573,238.354z</Geometry>
+  <Geometry x:Key="BatteryGeometry2">F0 M512,241z M0,0z M114.919,229.504C114.919,224.504,110.828,220.444,105.789,220.444L87.528,220.444C82.489,220.444,78.398,224.504,78.398,229.504L78.398,282.496C78.398,287.496,82.489,291.556,87.528,291.556L105.789,291.556C110.828,291.556,114.919,287.496,114.919,282.496L114.919,229.504z</Geometry>
+  <DrawingGroup x:Key="BatteryDrawingGroup" ClipGeometry="M0,0 V241 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2200,-689">
+      <DrawingGroup Opacity="1" Transform="1,0,0,0.46875,2200,689.148">
+        <DrawingGroup Opacity="1">
+          <DrawingGroup Opacity="1" Transform="1.01286,0,0,3.82583,16.4057,-746.924">
+            <GeometryDrawing Geometry="{StaticResource BatteryGeometry1}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="11.37" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1.1907,0,0,2.56,-66.2757,-399.36">
+            <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource BatteryGeometry2}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.85" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1.1907,0,0,2.56,-99.6217,-396.214">
+            <GeometryDrawing Brush="#FF000000">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.85" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1.1907,0,0,2.56,-3.79968,-396.214">
+            <GeometryDrawing Brush="#FF000000">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.85" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1.1907,0,0,2.56,92.0224,-396.214">
+            <GeometryDrawing Brush="#FF000000">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.85" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1.1907,0,0,2.56,187.844,-396.214">
+            <GeometryDrawing Brush="#FF000000">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.85" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+          </DrawingGroup>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="BatteryDrawingImage" Drawing="{StaticResource BatteryDrawingGroup}" />
+  <Geometry x:Key="ArrowLeftGeometry">F0 M512,512z M0,0z M2977.76,334.917L2977.76,481.477 2578.21,256 2977.76,30.523 2977.76,177.083 3230.19,177.083 3230.19,334.917 2977.76,334.917z</Geometry>
+  <DrawingGroup x:Key="ArrowLeftDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2805,0">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,-0.065622,0">
+        <DrawingGroup Opacity="1" Transform="0.523014,0,0,0.926792,1527.35,18.7412">
+          <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource ArrowLeftGeometry}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="70.88" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="ArrowLeftDrawingImage" Drawing="{StaticResource ArrowLeftDrawingGroup}" />
+  <Geometry x:Key="DisChargeGeometry">F0 M513,241z M0,0z M1810.21,1097.3L1810.21,1034.7 2311.25,1034.7 2311.25,976.565 2525.69,1066 2311.25,1155.43 2311.25,1097.3 1810.21,1097.3z</Geometry>
+  <DrawingGroup x:Key="DisChargeDrawingGroup" ClipGeometry="M0,0 V241 H513 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-1654,-1278">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1.34602,-487.393,4.67569">
+        <DrawingGroup Opacity="1" Transform="-0.417048,0,0,0.74293,3300.51,243.739">
+          <GeometryDrawing Brush="#FFF20D0D" Geometry="{StaticResource DisChargeGeometry}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF20D0D" Thickness="55.69" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="DisChargeDrawingImage" Drawing="{StaticResource DisChargeDrawingGroup}" />
+  <Geometry x:Key="LogGeometry1">F0 M512,512z M0,0z M2005.3,140.563C2005.3,117.704,1986.74,99.146,1963.88,99.146L1728.12,99.146C1705.26,99.146,1686.7,117.704,1686.7,140.563L1686.7,376.326C1686.7,399.185,1705.26,417.743,1728.12,417.743L1963.88,417.743C1986.74,417.743,2005.3,399.185,2005.3,376.326L2005.3,140.563z</Geometry>
+  <Geometry x:Key="LogGeometry2">F0 M512,512z M0,0z M1703.64,357.93C1703.64,357.93 1749.59,332.787 1760,258.444 1770.41,184.102 1787.51,128.957 1787.51,128.957 1787.51,128.957 1823.19,331.167 1876.72,346.036 1930.25,360.904 1901.25,265.746 1936.94,224.858</Geometry>
+  <DrawingGroup x:Key="LogDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-1101,0">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,-489.501,0">
+        <DrawingGroup Opacity="1" Transform="1.22377,0,0,1.22377,-412.578,-57.8321">
+          <GeometryDrawing Geometry="{StaticResource LogGeometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF8B8C73" Thickness="26.15" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1,0,0,1,26.2144,12.5564">
+          <GeometryDrawing Geometry="{StaticResource LogGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF0D28F2" Thickness="32" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="LogDrawingImage" Drawing="{StaticResource LogDrawingGroup}" />
+  <Geometry x:Key="BatEmptyGeometry1">F0 M512,241z M0,0z M462.573,238.354C462.573,225.223,443.944,214.562,420.997,214.562L95.041,214.562C72.095,214.562,53.465,225.223,53.465,238.354L53.465,285.937C53.465,299.068,72.095,309.728,95.041,309.728L420.997,309.728C443.944,309.728,462.573,299.068,462.573,285.937L462.573,238.354z</Geometry>
+  <Geometry x:Key="BatEmptyGeometry2">F0 M512,241z M0,0z M114.919,229.624C114.919,224.557,110.828,220.444,105.789,220.444L87.528,220.444C82.489,220.444,78.398,224.557,78.398,229.624L78.398,282.376C78.398,287.443,82.489,291.556,87.528,291.556L105.789,291.556C110.828,291.556,114.919,287.443,114.919,282.376L114.919,229.624z</Geometry>
+  <DrawingGroup x:Key="BatEmptyDrawingGroup" ClipGeometry="M0,0 V241 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2200,-1280">
+      <DrawingGroup Opacity="1" Transform="1,0,0,0.46875,2200,1280.93">
+        <DrawingGroup Opacity="1" Transform="1.01286,0,0,3.77597,16.4057,-748.551">
+          <GeometryDrawing Geometry="{StaticResource BatEmptyGeometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="11.48" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.1907,0,0,2.52664,-66.2757,-405.517">
+          <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource BatEmptyGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="13.94" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="BatEmptyDrawingImage" Drawing="{StaticResource BatEmptyDrawingGroup}" />
+  <Geometry x:Key="BatHalfGeometry1">F0 M512,241z M0,0z M462.573,238.354C462.573,225.223,443.944,214.562,420.997,214.562L95.041,214.562C72.095,214.562,53.465,225.223,53.465,238.354L53.465,285.937C53.465,299.068,72.095,309.728,95.041,309.728L420.997,309.728C443.944,309.728,462.573,299.068,462.573,285.937L462.573,238.354z</Geometry>
+  <Geometry x:Key="BatHalfGeometry2">F0 M512,241z M0,0z M114.919,229.624C114.919,224.557,110.828,220.444,105.789,220.444L87.528,220.444C82.489,220.444,78.398,224.557,78.398,229.624L78.398,282.376C78.398,287.443,82.489,291.556,87.528,291.556L105.789,291.556C110.828,291.556,114.919,287.443,114.919,282.376L114.919,229.624z</Geometry>
+  <Geometry x:Key="BatHalfGeometry3">F0 M512,241z M0,0z M213.948,297.086L178.48,297.086 178.48,271.197 213.948,297.086z</Geometry>
+  <Geometry x:Key="BatHalfGeometry4">F0 M512,241z M0,0z M213.948,297.086L178.48,297.086 178.48,212.455 213.948,238.345 213.948,297.086z</Geometry>
+  <DrawingGroup x:Key="BatHalfDrawingGroup" ClipGeometry="M0,0 V241 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-2200,-999">
+      <DrawingGroup Opacity="1" Transform="1,0,0,0.46875,2200,999.602">
+        <DrawingGroup Opacity="1" Transform="1.1907,0,0,1.18436,2.75335E-13,-11.3621">
+          <DrawingGroup Opacity="1" Transform="0.850644,0,0,3.18819,13.7782,-622.436">
+            <GeometryDrawing Geometry="{StaticResource BatHalfGeometry1}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="11.48" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,2.13333,-55.6612,-332.8">
+            <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource BatHalfGeometry2}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.94" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="-1,0,0,2.13333,389.237,-330.178">
+            <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource BatHalfGeometry3}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.94" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="-1,0,0,2.13333,469.712,-330.178">
+            <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource BatHalfGeometry4}">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.94" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+            </GeometryDrawing>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,2.13333,157.76,-330.178">
+            <GeometryDrawing Brush="#FF000000">
+              <GeometryDrawing.Pen>
+                <Pen Brush="#FF000000" Thickness="13.94" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+              </GeometryDrawing.Pen>
+              <GeometryDrawing.Geometry>
+                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+              </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+          </DrawingGroup>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="BatHalfDrawingImage" Drawing="{StaticResource BatHalfDrawingGroup}" />
+  <Geometry x:Key="StartGeometry">F0 M512,512z M0,0z M755.626,96.254L907.841,400.685 603.41,400.685 755.626,96.254z</Geometry>
+  <DrawingGroup x:Key="StartDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup.Transform>
+      <TranslateTransform X="0" Y="193.086" />
+    </DrawingGroup.Transform>
+    <DrawingGroup Opacity="1" Transform="0.913903,0,0,0.913903,-447.27,176.462">
+      <DrawingGroup Opacity="1" Transform="7.25639E-17,1.18506,-1.18506,7.25639E-17,1063.97,-808.43">
+        <GeometryDrawing Brush="#FF8BBF40" Geometry="{StaticResource StartGeometry}">
+          <GeometryDrawing.Pen>
+            <Pen Brush="#FF8BBF40" Thickness="88.64" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+          </GeometryDrawing.Pen>
+        </GeometryDrawing>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="StartDrawingImage" Drawing="{StaticResource StartDrawingGroup}" />
+  <Geometry x:Key="ChannelGeometry1">F0 M512,241z M0,0z M1733.5,809.148L1801.94,809.148</Geometry>
+  <Geometry x:Key="ChannelGeometry2">F0 M512,241z M0,0z M1733.5,809.148L1801.94,809.148</Geometry>
+  <Geometry x:Key="ChannelGeometry3">F0 M512,241z M0,0z M1733.5,809.148L1801.94,809.148</Geometry>
+  <DrawingGroup x:Key="ChannelDrawingGroup" ClipGeometry="M0,0 V241 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-1653,-689">
+      <DrawingGroup Opacity="1" Transform="1.0234,0,0,0.479718,-539.366,423.68">
+        <DrawingGroup Opacity="1" Transform="1.22492,0,0,2.61317,-405.899,-1310.53">
+          <GeometryDrawing Brush="#FF59A698">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="34.04" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <EllipseGeometry RadiusX="69.969" RadiusY="69.969" Center="2398,809" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.22492,0,0,2.61317,-684.06,-1310.53">
+          <GeometryDrawing Brush="#FF59A698">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF20D0D" Thickness="34.04" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <EllipseGeometry RadiusX="69.969" RadiusY="69.969" Center="2398,809" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="0.977136,0,0,2.08456,526.001,-883.185">
+          <GeometryDrawing Geometry="{StaticResource ChannelGeometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="26.67" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="0.977136,0,0,2.08456,804.163,-883.185">
+          <GeometryDrawing Geometry="{StaticResource ChannelGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="26.67" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="-1.79497E-16,2.08456,-0.977136,-3.82927E-16,3043.95,-2881.39">
+          <GeometryDrawing Geometry="{StaticResource ChannelGeometry3}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="26.67" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="ChannelDrawingImage" Drawing="{StaticResource ChannelDrawingGroup}" />
+  <Geometry x:Key="ChargeGeometry">F0 M513,241z M0,0z M1810.21,1097.3L1810.21,1034.7 2307.27,1034.7 2307.27,976.565 2525.69,1066 2307.27,1155.43 2307.27,1097.3 1810.21,1097.3z</Geometry>
+  <DrawingGroup x:Key="ChargeDrawingGroup" ClipGeometry="M0,0 V241 H513 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-1653,-999">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1.34602,-488.393,-274.476">
+        <DrawingGroup Opacity="1" Transform="0.409465,0,0,0.74293,1511.3,243.739">
+          <GeometryDrawing Brush="#FF0D28F2" Geometry="{StaticResource ChargeGeometry}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF0D28F2" Thickness="55.84" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="ChargeDrawingImage" Drawing="{StaticResource ChargeDrawingGroup}" />
+  <Geometry x:Key="IconGeometry1">F0 M768,769z M0,0z M462.573,238.354C462.573,225.223,434.068,214.562,398.958,214.562L117.08,214.562C81.97,214.562,53.465,225.223,53.465,238.354L53.465,285.937C53.465,299.068,81.97,309.728,117.08,309.728L398.958,309.728C434.068,309.728,462.573,299.068,462.573,285.937L462.573,238.354z</Geometry>
+  <Geometry x:Key="IconGeometry2">F0 M768,769z M0,0z M114.919,226.444C114.919,223.133,110.828,220.444,105.789,220.444L87.528,220.444C82.489,220.444,78.398,223.133,78.398,226.444L78.398,285.556C78.398,288.867,82.489,291.556,87.528,291.556L105.789,291.556C110.828,291.556,114.919,288.867,114.919,285.556L114.919,226.444z</Geometry>
+  <DrawingGroup x:Key="IconDrawingGroup" ClipGeometry="M0,0 V769 H768 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,0,-596">
+      <DrawingGroup Opacity="1" Transform="1.02433,0,0,1.02433,-644.068,-100.546">
+        <DrawingGroup Opacity="1" Transform="1.09552,1.09552,-2.92926,2.92926,1500.28,16.1697">
+          <GeometryDrawing Geometry="{StaticResource IconGeometry1}">
+            <GeometryDrawing.Brush>
+              <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" MappingMode="Absolute" SpreadMethod="Pad" Opacity="1" Transform="409.108,0,0,95.166,53.465,262.145">
+                <GradientStop Color="#FF116BFF" Offset="0" />
+                <GradientStop Color="#FF43008D" Offset="1" />
+                <GradientStop Color="#FF77FFFF" Offset="1" />
+              </LinearGradientBrush>
+            </GeometryDrawing.Brush>
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF2AF0D" Thickness="13.32" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.28787,1.28787,-1.96007,1.96007,1144.74,192.854">
+          <GeometryDrawing Brush="#FFF2AF0D" Geometry="{StaticResource IconGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF2AF0D" Thickness="17.76" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.19502,1.19502,-1.63407,1.63407,1052.63,271.678">
+          <GeometryDrawing Brush="#FFF2AF0D">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF2AF0D" Thickness="20.58" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.19502,1.19502,-1.63407,1.63407,1148.8,367.848">
+          <GeometryDrawing Brush="#FFF2AF0D">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF2AF0D" Thickness="20.58" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.19502,1.19502,-1.63407,1.63407,1244.97,464.018">
+          <GeometryDrawing Brush="#FFF2AF0D">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF2AF0D" Thickness="20.58" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.19502,1.19502,-1.63407,1.63407,1341.14,560.188">
+          <GeometryDrawing Brush="#FFF2AF0D">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FFF2AF0D" Thickness="20.58" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="178.48,212.455,35.468,84.631" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="IconDrawingImage" Drawing="{StaticResource IconDrawingGroup}" />
+  <Geometry x:Key="DeviceGeometry1">F0 M512,512z M0,0z M885.618,815.365L885.618,1010.24</Geometry>
+  <Geometry x:Key="DeviceGeometry2">F0 M512,512z M0,0z M885.618,815.365L885.618,1010.24</Geometry>
+  <DrawingGroup x:Key="DeviceDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-805,-600">
+      <DrawingGroup Opacity="1" Transform="0.659507,0,0,0.659507,273.71,203.928">
+        <DrawingGroup Opacity="1" Transform="1.94105,0,0,1.94105,-860.417,-783.074">
+          <GeometryDrawing Brush="#FF848484">
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="885.618,827.139,345.32,172.882" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.94105,0,0,1.94105,-860.417,-783.074">
+          <GeometryDrawing Geometry="{StaticResource DeviceGeometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="26.04" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.94105,0,0,1.94105,-190.132,-783.074">
+          <GeometryDrawing Geometry="{StaticResource DeviceGeometry2}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF000000" Thickness="26.04" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1.94105,0,0,1.94105,-860.417,-783.074">
+          <GeometryDrawing Brush="#FFDADADA">
+            <GeometryDrawing.Geometry>
+              <RectangleGeometry RadiusX="0" RadiusY="0" Rect="934.949,856,126.051,96" />
+            </GeometryDrawing.Geometry>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="DeviceDrawingImage" Drawing="{StaticResource DeviceDrawingGroup}" />
+  <Geometry x:Key="Log2Geometry1">F0 M513,513z M0,0z M2005.3,140.563C2005.3,117.704,1986.74,99.146,1963.88,99.146L1728.12,99.146C1705.26,99.146,1686.7,117.704,1686.7,140.563L1686.7,376.326C1686.7,399.185,1705.26,417.743,1728.12,417.743L1963.88,417.743C1986.74,417.743,2005.3,399.185,2005.3,376.326L2005.3,140.563z</Geometry>
+  <Geometry x:Key="Log2Geometry2">F0 M513,513z M0,0z M939.076,1312.93L1013.47,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry3">F0 M513,513z M0,0z M939.076,1312.93L995.176,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry4">F0 M513,513z M0,0z M939.076,1312.93L993.274,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry5">F0 M513,513z M0,0z M939.076,1312.93L1013.47,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry6">F0 M513,513z M0,0z M939.076,1312.93L995.176,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry7">F0 M513,513z M0,0z M939.076,1312.93L993.274,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry8">F0 M513,513z M0,0z M939.076,1312.93L1013.47,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry9">F0 M513,513z M0,0z M939.076,1312.93L995.176,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry10">F0 M513,513z M0,0z M939.076,1312.93L993.274,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry11">F0 M513,513z M0,0z M939.076,1312.93L1013.47,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry12">F0 M513,513z M0,0z M939.076,1312.93L995.176,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry13">F0 M513,513z M0,0z M939.076,1312.93L993.274,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry14">F0 M513,513z M0,0z M939.076,1312.93L1013.47,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry15">F0 M513,513z M0,0z M939.076,1312.93L995.176,1312.93</Geometry>
+  <Geometry x:Key="Log2Geometry16">F0 M513,513z M0,0z M939.076,1312.93L993.274,1312.93</Geometry>
+  <DrawingGroup x:Key="Log2DrawingGroup" ClipGeometry="M0,0 V513 H513 V0 H0 Z">
+    <DrawingGroup Opacity="1" Transform="1,0,0,1,-810,-1153">
+      <DrawingGroup Opacity="1" Transform="1,0,0,1,-779.761,1153.72">
+        <DrawingGroup Opacity="1" Transform="1.22377,0,0,1.22377,-412.578,-57.8321">
+          <GeometryDrawing Geometry="{StaticResource Log2Geometry1}">
+            <GeometryDrawing.Pen>
+              <Pen Brush="#FF8B8C73" Thickness="26.15" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+            </GeometryDrawing.Pen>
+          </GeometryDrawing>
+        </DrawingGroup>
+        <DrawingGroup Opacity="1" Transform="1,0,0,1,-2.27374E-13,-2.85754">
+          <DrawingGroup Opacity="1">
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,763.166,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry2}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,890.351,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry3}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,997.487,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry4}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,1,2.27374E-13,60.9789">
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,763.166,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry5}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,890.351,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry6}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,997.487,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry7}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,1,4.54747E-13,121.958">
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,763.166,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry8}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,890.351,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry9}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,997.487,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry10}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,1,6.82121E-13,182.937">
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,763.166,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry11}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,890.351,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry12}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,997.487,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry13}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+          </DrawingGroup>
+          <DrawingGroup Opacity="1" Transform="1,0,0,1,9.09495E-13,243.916">
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,763.166,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry14}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,890.351,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry15}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+            <DrawingGroup Opacity="1" Transform="1,0,0,1,997.487,-1173.59">
+              <GeometryDrawing Geometry="{StaticResource Log2Geometry16}">
+                <GeometryDrawing.Pen>
+                  <Pen Brush="#FF0D28F2" Thickness="39.82" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" />
+                </GeometryDrawing.Pen>
+              </GeometryDrawing>
+            </DrawingGroup>
+          </DrawingGroup>
+        </DrawingGroup>
+      </DrawingGroup>
+    </DrawingGroup>
+  </DrawingGroup>
+  <DrawingImage x:Key="Log2DrawingImage" Drawing="{StaticResource Log2DrawingGroup}" />
+</ResourceDictionary>

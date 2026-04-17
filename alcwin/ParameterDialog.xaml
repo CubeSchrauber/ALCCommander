@@ -1,0 +1,33 @@
+﻿<Window x:Class="alcwin.ParameterDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:alcwin"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Style="{StaticResource WindowDefault}"
+        Title="Kanalparameter">
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <local:ParameterControl x:Name="Parameter" Grid.Row="0" Grid.Column="0"/>
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="8 0 0 0">
+            <StackPanel.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource AlcButtonStyle}">
+                    <Setter Property="Width" Value="96"/>
+                    <Setter Property="Margin" Value="0 0 0 8"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="OK" IsDefault="True" Click="Ok_Click"/>
+            <Button Content="Abbrechen" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

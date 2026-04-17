@@ -1,0 +1,59 @@
+﻿<Window x:Class="alcwin.LogSelectDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:alcwin"
+        mc:Ignorable="d"
+        Style="{StaticResource WindowDefault}"
+        Loaded="Window_Loaded"
+        Title="Logs" Height="400" Width="500" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="Log wählen" Margin="8" Style="{StaticResource Caption}"/>
+        <ListBox x:Name="LogList" Grid.Row="1" Margin="8" FontSize="16">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding Path=Index, StringFormat=Log {0,2:d}}" TextAlignment="Left"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Position, StringFormat={}{0}}" TextAlignment="Right"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Records, StringFormat={}{0}}" TextAlignment="Right"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Time}" TextAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="8" Width="100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource AlcButtonStyle}"/>
+            </Grid.Resources>
+            <Button Grid.Row="0" Content="Ok" IsDefault="True" Click="Ok_Click"/>
+            <Button Grid.Row="1" Content="Abbrechen" IsCancel="True" Margin="0 8 0 0"/>
+            <Button Grid.Row="3" Content="Löschen" Click="Delete_Click"/>
+        </Grid>
+    </Grid>
+</Window>

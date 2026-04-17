@@ -1,0 +1,386 @@
+﻿<Window x:Class="alcwin.DeviceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:alcwin"
+        Style="{StaticResource WindowDefault}"
+        Loaded="Window_Loaded"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="Geräteparameter" d:DesignHeight="450" d:DesignWidth="830">
+    <Grid Margin="8">
+        <Grid.Resources>
+            <Style TargetType="TextBox" BasedOn="{StaticResource AlcTextBoxStyle}">
+                <Setter Property="Width" Value="100"/>
+                <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            </Style>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource Caption}"/>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.Column="0" Style="{DynamicResource AlcTabControlStyle}">
+            <TabItem Header="NiCd" Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageNC" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitNC" Grid.Row="1" Grid.Column="1" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesNC" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormNC" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseNC" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBox x:Name="LadespannungNC" Grid.Row="5" Grid.Column="1" IsReadOnly="True" />
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungNC" Grid.Row="6" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="NiMH"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageNiMH" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitNiMH" Grid.Row="1" Grid.Column="1" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesNiMH" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormNiMH" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBox x:Name="PauseNiMH" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungNiMH" Grid.Row="5" Grid.Column="1" IsReadOnly="True" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungNiMH" Grid.Row="6" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Li-4.1"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageLiIon" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitLiIon" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesLiIon" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormLion" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseLiIon" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungLiIon" Grid.Row="5" Grid.Column="1" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungLiIon" Grid.Row="6" Grid.Column="1" />
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Li-4.2"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageLiPol" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitLiPol" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesLiPol" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormLiPol" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseLiPol" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungLiPol" Grid.Row="5" Grid.Column="1" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungLiPol" Grid.Row="6" Grid.Column="1"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Li-4.35"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageLi435" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitLi435" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesLi435" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormLi435" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseLi435" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungLi435" Grid.Row="5" Grid.Column="1" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungLi435" Grid.Row="6" Grid.Column="1"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="LiFePo"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageLiFePo" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitLiFePo" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesLiFePo" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormLiFePo" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseLiFePo" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungLiFePo" Grid.Row="5" Grid.Column="1"/>
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungLiFePo" Grid.Row="6" Grid.Column="1"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="NiZn"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageNiZn" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitNiZn" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesNiZn" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormNiZn" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseNiZn" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungNiZn" Grid.Row="5" Grid.Column="1" IsReadOnly="True" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungNiZn" Grid.Row="6" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pb"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltagePb" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitPb" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesPb" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormPb" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PausePb" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungPb" Grid.Row="5" Grid.Column="1" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungPb" Grid.Row="6" Grid.Column="1"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="AGM/CA"  Style="{DynamicResource AlcTabItemStyle}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Entladeschlussspannung:"/>
+                    <TextBox x:Name="FinalDischargeVoltageAGM" Grid.Row="0" Grid.Column="1" />
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="mV" />
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Ladeenderkennungsgrenze:"/>
+                    <TextBox x:Name="ChargeEndLimitAGM" Grid.Row="1" Grid.Column="1" IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text ="% -dU"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Zyklen:"/>
+                    <TextBox x:Name="CyclesAGM" Grid.Row="2" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="Zyklen formieren:"/>
+                    <TextBox x:Name="CyclesFormAGM" Grid.Row="3" Grid.Column="1" Width="60" HorizontalAlignment="Left"  IsReadOnly="True" IsEnabled="False" />
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="Vorgabe Pause:"/>
+                    <TextBox x:Name="PauseAGM" Grid.Row="4" Grid.Column="1" />
+                    <TextBlock Grid.Row="4" Grid.Column="2" Text="min"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="Ladespannung:"/>
+                    <TextBlock Grid.Row="5" Grid.Column="2" Text="mV"/>
+                    <TextBox x:Name="LadespannungAGM" Grid.Row="5" Grid.Column="1" IsReadOnly="True" />
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="Erhaltungsspannung:"/>
+                    <TextBox x:Name="ErhaltungsspannungAGM" Grid.Row="6" Grid.Column="1" IsReadOnly="True"/>
+                    <TextBlock Grid.Row="6" Grid.Column="2" Text="mV"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Column="1" Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Style="{StaticResource AlcButtonStyle}" Padding="4" Click="Save_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="{StaticResource ArrowRightDrawingImage}" Height="40"/>
+                    <Image Grid.Column="1" Source="{StaticResource DeviceDrawingImage}" Height="40" Margin="16 0 0 0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="1"  Style="{StaticResource AlcButtonStyle}" Padding="4" Click="Load_Click" Margin="0 8 0 0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="{StaticResource ArrowLeftDrawingImage}" Height="40"/>
+                    <Image Grid.Column="1" Source="{StaticResource DeviceDrawingImage}" Height="40" Margin="16 0 0 0"/>
+                </Grid>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

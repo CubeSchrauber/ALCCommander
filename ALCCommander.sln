@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alclib", "alclib\alclib.csproj", "{3A7B48DB-C8CC-4935-A9C9-2424C1418251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "alcwin", "alcwin\alcwin.csproj", "{CAF8D770-26D7-4162-A926-9F15D1D0C5B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A7B48DB-C8CC-4935-A9C9-2424C1418251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7B48DB-C8CC-4935-A9C9-2424C1418251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7B48DB-C8CC-4935-A9C9-2424C1418251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7B48DB-C8CC-4935-A9C9-2424C1418251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF8D770-26D7-4162-A926-9F15D1D0C5B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF8D770-26D7-4162-A926-9F15D1D0C5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF8D770-26D7-4162-A926-9F15D1D0C5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF8D770-26D7-4162-A926-9F15D1D0C5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7628EE29-0B57-4248-AAB2-684F5DBB347C}
+	EndGlobalSection
+EndGlobal
